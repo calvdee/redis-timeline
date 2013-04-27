@@ -28,7 +28,7 @@ class RedisTimeline(object):
 			url = kwargs.get('url', None)
 
 			if url is not None:
-				self._redis = StrictRedis().from_url(url)
+				self._redis = StrictRedis.from_url(url)
 			else:
 				self._redis = StrictRedis(**kwargs)
 
