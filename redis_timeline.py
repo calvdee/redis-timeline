@@ -35,13 +35,15 @@ class RedisTimeline(object):
 	def push(self, value):
 		"""
 		Adds the value to the front of the list and trim if the 
-		max length != 0.
+		max length != 0. Returns the value.
 		"""
 
 		self._redis.lpush(self.name, value)
 
 		if self.max_length > 0:
 			self._redis.ltrim(self.name, 0, self.max_length-1)
+
+		return value
 
 	def range(self, count=0, **kwargs):
 		"""
