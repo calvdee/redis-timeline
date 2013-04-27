@@ -1,11 +1,12 @@
 Description
 ===========
 
-A generic timeline, Redis backend timeline.
+A Redis-backed generic timeline implementation.
 
 Installation
 ============
 
+    git clone https://github.com/calvdee/redis_timeline.git
     pip install redis
     pip install hiredis
     
