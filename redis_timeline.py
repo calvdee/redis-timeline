@@ -79,3 +79,4 @@ class RedisTimeline(object):
         Access the length (count) as a property.
         """
         return self.count()
+
